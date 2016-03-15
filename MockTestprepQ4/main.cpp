@@ -65,3 +65,20 @@ public:
 
 };
 
+int main(){
+	//Do demonstrate polymorphism I'll create a pointer of type Animal and use it to access the subclass animals
+
+	Animal *p = new Bird();
+	p->name();
+	p->does();
+
+	Animal *t = new Dog();
+	t->name();
+	t->does();
+
+	//This demonstrates overriding of the pure virtual functions in the abstract class Animal
+
+	system("PAUSE");
+	return 0;
+}
+
