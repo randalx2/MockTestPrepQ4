@@ -16,6 +16,7 @@ protected: string nameOfAnimal, action;
 
 public: Animal(){
 			nameOfAnimal = "Some Animal";
+			action = "whatever";
 }
 		~Animal(){
 
@@ -66,7 +67,7 @@ public:
 };
 
 int main(){
-	//Do demonstrate polymorphism I'll create a pointer of type Animal and use it to access the subclass animals
+	//To demonstrate polymorphism I'll create a pointer of type Animal and use it to access the subclass animals
 
 	Animal *p = new Bird();
 	p->name();
@@ -75,6 +76,9 @@ int main(){
 	Animal *t = new Dog();
 	t->name();
 	t->does();
+
+	delete p;
+	delete t;
 
 	//This demonstrates overriding of the pure virtual functions in the abstract class Animal
 
